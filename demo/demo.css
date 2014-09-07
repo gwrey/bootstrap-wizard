@@ -1,0 +1,57 @@
+body {
+  min-height: 2000px;
+  /*padding-top: 70px;*/
+}
+
+body.modal-open {
+    overflow: visible;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.example {
+    /*padding-top: 70px;*/
+    margin-bottom: 20px;
+}
+
+.wizard .wizard-body {
+    background-color: #fcfcfc;
+}
+
+.modal {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+.modal .wizard nav {
+    border-bottom-left-radius: 4px;
+}
+.modal .wizard .wizard-body {
+    border-bottom-right-radius: 4px;
+}
+
+
+.panel .wizard nav {
+    border-bottom-left-radius: 4px;
+}
+.panel .wizard .wizard-body {
+    border-bottom-right-radius: 4px;
+}
+
+@media (min-width:768px) {
+    #plain {
+        margin: auto;
+        width: 600px;
+    }
+    .modal .modal-dialog {
+        width: 602px;
+    }
+    .panel {
+        width: 602px;
+        margin: auto;
+    }
+}
+

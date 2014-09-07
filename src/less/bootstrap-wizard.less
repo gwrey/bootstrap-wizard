@@ -1,0 +1,187 @@
+@import (reference) "../../vendor/bootstrap/less/bootstrap.less";
+
+@wizard-body-color: @text-color;
+@wizard-body-bg: @body-bg;
+
+@wizard-navbar-width: 180px;
+@wizard-navbar-bg: @gray-lighter;
+
+@wizard-navbar-link-default-color: @gray-light;
+@wizard-navbar-link-default-bg: lighten(@wizard-navbar-link-default-color,40%);
+
+@wizard-navbar-link-visited-color: @link-color;
+@wizard-navbar-link-visited-bg: @wizard-navbar-link-default-bg;
+
+@wizard-navbar-link-hover-color: #fff;
+@wizard-navbar-link-hover-bg: #1b6699;
+
+@wizard-navbar-link-active-color: #fff;
+@wizard-navbar-link-active-bg: #2383c4;
+
+@wizard-navbar-link-disabled-color: @navbar-default-link-disabled-color;
+@wizard-navbar-link-disabled-bg: @navbar-default-link-disabled-bg;
+
+
+@wizard-navbar-link-collapse-default-color: @wizard-navbar-link-default-color;
+@wizard-navbar-link-collapse-default-bg: lighten(@wizard-navbar-link-default-bg, 3%);
+
+@wizard-navbar-link-collapse-visited-color: @wizard-navbar-link-visited-color;
+@wizard-navbar-link-collapse-visited-bg: @wizard-navbar-link-collapse-default-bg;
+
+@wizard-navbar-link-collapse-hover-color: @wizard-navbar-link-hover-bg;
+@wizard-navbar-link-collapse-hover-bg: darken(@wizard-navbar-link-collapse-default-bg, 5%);
+
+@wizard-navbar-link-collapse-active-color: @wizard-navbar-link-active-bg;
+@wizard-navbar-link-collapse-active-bg: @wizard-navbar-link-default-bg;
+
+@wizard-navbar-link-collapse-disabled-color: @wizard-navbar-link-disabled-color;
+@wizard-navbar-link-collapse-disabled-bg: @wizard-navbar-link-disabled-bg;
+
+
+.wizard {
+    .invisible;
+    width: 100%;
+    display: block;
+    .clearfix;
+    padding: 0;
+
+    nav {
+        position: relative;
+        width: 100%;
+        background-color: @wizard-navbar-bg;
+        @media (min-width:768px) {
+            .pull-left;
+            width: @wizard-navbar-width;
+            height: 100%;
+        }
+        .wizard-nav-header{
+            color: @wizard-navbar-link-active-color;
+            background-color: @wizard-navbar-link-active-bg;
+            .clearfix;
+            .navbar-toggle {
+                width: 32px;
+                height: 32px;
+            }
+            h3.wizard-nav-title {
+                margin: 0;
+                line-height: 2;
+            }
+        }
+        .nav-wizard {
+            > li {
+                width: 100%;
+                > a {
+                    color: @wizard-navbar-link-default-color;
+                    background-color: @wizard-navbar-link-default-bg;
+                    i {
+                        font-size: @font-size-large;
+                        margin-right: 10px;
+                    }
+                    .caret {
+                        .pull-right;
+                    }
+                }
+
+                &.visited > a {
+                    color: @wizard-navbar-link-visited-color;
+                    background-color: @wizard-navbar-link-visited-bg;
+
+                    &:hover {
+                        font-weight: 600;
+                        color: @wizard-navbar-link-hover-color;
+                        background-color: @wizard-navbar-link-hover-bg;
+                    }
+                }
+                &.active > a {
+                    color: @wizard-navbar-link-active-color;
+                    background-color: @wizard-navbar-link-active-bg;
+                    .caret {
+                        border-top: 0;
+                        border-bottom: @caret-width-base solid;
+                        content: "";
+                    }
+                }
+                &.disabled > a {
+                    color: @wizard-navbar-link-disabled-color;
+                    background-color: @wizard-navbar-link-disabled-bg;
+                }
+
+                > ul {
+                    > li {
+                        > a {
+                            padding-left: @grid-gutter-width;
+                            color: @wizard-navbar-link-collapse-default-color;
+                            background-color: @wizard-navbar-link-collapse-default-bg;
+                        }
+                        &.visited > a {
+                            color: @wizard-navbar-link-collapse-visited-color;
+                            background-color: @wizard-navbar-link-collapse-visited-bg;
+                            &:hover {
+                                font-weight: 600;
+                                color: @wizard-navbar-link-collapse-hover-color;
+                                background-color: @wizard-navbar-link-collapse-hover-bg;
+                            }
+                        }
+                        &.active > a {
+                            // font-weight: 600;
+                            color: @wizard-navbar-link-collapse-active-color;
+                            background-color: @wizard-navbar-link-collapse-hover-bg;
+                        }
+                        &.disabled > a {
+                            color: @wizard-navbar-link-collapse-disabled-color;
+                            background-color: @wizard-navbar-link-collapse-disabled-bg;
+                        }
+                    }
+                }
+
+            }
+        }
+        .progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+    }
+
+    .wizard-body {
+        color: @wizard-body-color;
+        background-color: @wizard-body-bg;
+        margin: 0;
+        padding: @grid-gutter-width / 2;
+
+        .wizard-content {
+            .wizard-title {
+                margin-top: 0;
+                font-weight: @headings-font-weight;
+            }
+
+        }
+
+        .wizard-footer {
+            height: 50px;
+            padding-top: @grid-gutter-width / 2;
+
+            button {
+                &.wizard-submit {
+                    display: none;
+                }
+                &.wizard-cancel {
+                    display: none;
+                }
+            }
+        }
+        @media (min-width:768px) {
+            margin: 0 0 0 @wizard-navbar-width;
+        }
+    }
+
+    .wizard-pane {
+        .invisible;
+        width: 100%;
+        overflow: hidden;
+        padding-right: 20px;
+    }
+
+}
