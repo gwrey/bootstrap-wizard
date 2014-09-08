@@ -4,10 +4,6 @@ Responsive Bootstrap 3 Wizard
 
 ![Screenshot](screenshots/default.png)
 
-![Screenshot](screenshots/xs-nav-collapse.png)
-
-![Screenshot](screenshots/xs-nav.png)
-
 Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.
 
 Inspired by Andrew Moffat's [Bootstrap Application Wizard](https://github.com/amoffat/bootstrap-application-wizard)
