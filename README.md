@@ -59,6 +59,29 @@ $(".wizard").bootstrapWizard(options);
   </tr>
 </table>
 
+## Methods
+<table>
+    <tr>
+        <th>method</th><th>description</th>
+    </tr>
+    <tr>
+        <td>markAllVisited</td><td>mark all nav items as visited</td>
+    </tr>
+    <tr>
+        <td>serialize</td></td>serialize all the form data</td>
+    </tr>
+</table>
+
+## Events
+<table>
+    <tr><th>event type</th><th>description</th></tr>
+    <tr>
+        <td>show.bw</td><td>fired when a nav is selected but has not yet been displayed</td>
+    </tr>
+    <tr>
+        <td>submit.bw</td><td>fires when the submit button is clicked</td>
+    </tr>
+</table>
 
 Inspired by Andrew Moffat's [Bootstrap Application Wizard](https://github.com/amoffat/bootstrap-application-wizard)
 
