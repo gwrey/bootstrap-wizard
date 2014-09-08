@@ -1,6 +1,6 @@
 # BootstrapWizard - v0.1
 
-Responsive Bootstrap 3 Wizard http://www.bootstrapwizard.com
+Responsive Bootstrap 3 Wizard
 
 Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.
 
