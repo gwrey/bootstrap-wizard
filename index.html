@@ -1,1 +1,169 @@
-Bootstrap Wizard
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Bootstrap-wizard by gwrey</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Bootstrap-wizard</h1>
+        <h2>Responsive wizard with expanding sub steps for Bootstrap 3</h2>
+        <a href="https://github.com/gwrey/bootstrap-wizard" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="bootstrapwizard---v01" class="anchor" href="#bootstrapwizard---v01"><span class="octicon octicon-link"></span></a>BootstrapWizard - v0.1</h1>
+
+<p>Responsive Bootstrap 3 Wizard</p>
+
+<p>Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.</p>
+
+<p><img src="screenshots/default.png" alt="Screenshot"></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wizard"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-wizard"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#step1"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        ...
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wizard-pane"</span> <span class="na">id=</span><span class="s">"step1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Step 1<span class="nt">&lt;/h3&gt;</span>
+        ...
+    <span class="nt">&lt;/div&gt;</span>
+    ...
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">".wizard"</span><span class="p">).</span><span class="nx">bootstrapWizard</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<table>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>default</th>
+<th>description</th>
+  </tr>
+<tr>
+<td>width</td>
+<td>numeric</td>
+<td>null</td>
+<td>width of the wizard</td>
+  </tr>
+<tr>
+<td>height</td>
+<td>numeric</td>
+<td>300</td>
+<td>height of wizard</td>
+  </tr>
+<tr>
+<td>cancelButton</td>
+<td>boolean</td>
+<td>false</td>
+<td>display the cancel button</td>
+  </tr>
+<tr>
+<td>footerButtons</td>
+<td>boolean</td>
+<td>true</td>
+<td>display the footer buttons</td>
+  </tr>
+<tr>
+<td>progressBar</td>
+<td>boolean</td>
+<td>true</td>
+<td>display the progress bar</td>
+  </tr>
+<tr>
+<td>buttonText</td>
+<td>object</td>
+<td><pre>{
+  cancel: "Cancel",
+  next: "Next",
+  back: "Back",
+  submit: "Submit",
+}</pre></td>
+<td>text for the buttons</td>
+  </tr>
+</table><h2>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h2>
+
+<table>
+<tr>
+<th>method</th>
+<th>description</th>
+    </tr>
+<tr>
+<td>markAllVisited</td>
+<td>mark all nav items as visited</td>
+    </tr>
+<tr>
+<td>serialize</td>
+<td>serialize all the form data</td>
+    </tr>
+</table><h2>
+<a name="events" class="anchor" href="#events"><span class="octicon octicon-link"></span></a>Events</h2>
+
+<table>
+<tr>
+<th>event type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>show.bw</td>
+<td>fired when a nav is selected but has not yet been displayed</td>
+    </tr>
+<tr>
+<td>submit.bw</td>
+<td>fires when the submit button is clicked</td>
+    </tr>
+</table><p>Inspired by Andrew Moffat's <a href="https://github.com/amoffat/bootstrap-application-wizard">Bootstrap Application Wizard</a></p>
+
+<p>Sub step collapse credit to Osman Nuri Okumuş <a href="https://github.com/onokumus/metisMenu">MetisMenu</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/gwrey/bootstrap-wizard/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/gwrey/bootstrap-wizard/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/gwrey/bootstrap-wizard"></a> is maintained by <a href="https://github.com/gwrey">gwrey</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
