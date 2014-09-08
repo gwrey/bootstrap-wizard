@@ -68,7 +68,7 @@ $(".wizard").bootstrapWizard(options);
         <td>markAllVisited</td><td>mark all nav items as visited</td>
     </tr>
     <tr>
-        <td>serialize</td></td>serialize all the form data</td>
+        <td>serialize</td><td>serialize all the form data</td>
     </tr>
 </table>
 
