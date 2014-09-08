@@ -3,7 +3,7 @@
  * Responsive wizard with expanding sub steps for Bootstrap 3
  *
  * @version     v0.1
- * @copyright   (c) 2014 Greg Wrey
+ * @copyright   (c) 2014 Gregory Wrey
  * @license     MIT
  */
 (function ($) {
@@ -59,14 +59,19 @@
             var $navList        = this.$element.children('ul.nav-wizard'); //.addClass("navbar-nav")
             var progressHeight  = 0;
             
+            // append the $nav and $body elements to the wizard
+            // set the width and height
             this.$element.append(this.$nav, this.$body).css({
                 "width":(this.options.width?this.options.width+"px":"auto"),
                 "height":this.options.height+"px"
             });
+            // move the $navList to the wizard-nav
             this.$nav.children(".wizard-nav").prepend($navList);
             
             var $wizardFooter   = this.$body.find(".wizard-footer");
             var $cancelButton   = $wizardFooter.find(".wizard-cancel");
+
+            // set back, next, submit methods
             this.$backButton     = $wizardFooter.find(".wizard-back").on("click", this.back);
             this.$nextButton     = $wizardFooter.find(".wizard-next").on("click", this.next);
             this.$submitButton   = $wizardFooter.find(".wizard-submit").on("click", this.submit);
@@ -74,12 +79,15 @@
             //     $(this).parents("nav").find(".wizard-nav").collapse("toggle");
             // });
 
+            // show the cancel button
             if ( this.options.cancelButton )
                 $cancelButton.show();
 
+            // hide the footer buttons
             if ( !this.options.footerButtons )
                 $wizardFooter.find(".btn-toolbar").hide();
 
+            // hide the progress bar
             if ( this.options.progressBar )
                 progressHeight = this.$nav.find(".progress").outerHeight();
             else
@@ -102,6 +110,7 @@
             $navList.find("li").not(".active").has("ul").children("ul").addClass("collapse");
             $navList.find("li").has("ul").children("a").append('<span class="caret"></span>');
 
+            // add listener to navlist
             $navList.on("click.bw", "li", function(event){
                 event.preventDefault();
                 event.stopPropagation();
@@ -112,10 +121,12 @@
                 $li.parents(".wizard").data("bootstrapWizard").show($li);
             });
 
+            // add listener to window resize
             $(window).on("resize.bw", function(){
                 $(".wizard").data("bootstrapWizard")._resize();
             });
 
+            // show the wizard
             this.$element.css("visibility", "visible").show();
             this.show($navList.find("li:first"));
         },
@@ -135,6 +146,7 @@
             var relatedTarget = this.$current;
             var relatedPane = this.$body.find( this.$current.find("a").attr("href") );
 
+            // trigger the show event
             var e = $.Event('show.bw', {
                 'relatedTarget': relatedTarget,
                 'relatedPane': relatedPane
@@ -142,46 +154,67 @@
             $li.trigger(e);
             if (e.isDefaultPrevented()) return;
             
+            // if show was not prevented by listener
+            // set $current to the nav li and add the visited and active classes
             this.$current = $li.addClass("visited active");
+            // get the href for the current nav
             href = this.$current.find("a").attr("href");
 
             /* metismenu - https://github.com/onokumus/metisMenu */
+            // remove the active class from siblings
+            // collapse sublists on siblings
             this.$current.siblings().removeClass("active").children("ul.in").collapse("hide");
+            // if current has a parent nav
             if ( ($parentNav = this.$current.parent("ul.collapse")).length ) {
+                // set the parent as active and not collapsed
                 $parentNav.collapse("show").parent("li").addClass("active").siblings().removeClass("active").children("ul.in").collapse("hide");
             }
+            // get prev nav item
             this.$prev = this.$current.prevAll(":not(.disabled):first");
+            // if there is no prev
             if ( !this.$prev.length ) {
+                // set prev to parent
                 this.$prev = this.$current.parents("li.active");
                 if ( this.$prev.find("a").attr("href") == '' ) {
                     this.$prev = this.$prev.prevAll(":not(.disabled):first");
                 }
             } else if ( ($childNav = this.$prev.children("ul")).length ) {
+                // if prev has children set prev to the last child
                 $childNav.find("li.active").removeClass("active");
                 this.$prev = $childNav.children("li:not(.disabled):last");
             }
 
             if ( ($childNav = this.$current.children("ul")).length ) {
+                // if current has children, show the child nav
                 $childNav.collapse("show").find("li.active").removeClass("active");
+                // set next to the first child
                 this.$next = $childNav.children("li:not(.disabled):first");
                 if ( href == '' ) {
+                    // if current doesn't have a pane to display, no href,
+                    // set current to next which is now the first child
                     this.$current = this.$next.addClass("visited active");
+                    // now next needs to be reset from the new current
                     this.$next = this.$current.nextAll(":not(.disabled):first");
+                    // get href from the new current
                     href = this.$current.find("a").attr("href");
                 }
             } else {
                 this.$next = this.$current.nextAll(":not(.disabled):first");
             }
+
             if ( !this.$next.length ) {
+                // set next to the parents next nav
                 this.$next = this.$current.parents("li.active").nextAll(":not(.disabled):first");
             }
 
+            // only show the back button if there is a prev
             if ( this.$prev.length ) {
                 this.$backButton.show();
             } else {
                 this.$backButton.hide();
             }
 
+            // only show submit on the last step
             if ( this.$next.length ) {
                 this.$nextButton.show();
                 this.$submitButton.hide();
@@ -190,8 +223,12 @@
                 this.$submitButton.show();
             }
 
+            // hide all the wizard panes
             this.$body.find(".wizard-pane:visible").hide();
+            // display the current pane
             this.$body.find( href ).show();
+
+            // if the mobile nav is displayed set the header
             if ( this.$nav.find(".wizard-nav-header").is(":visible") ) {
                 var navTitle = this.$current.children("a").text();
                 if ( ($parentNav = this.$current.parent("ul.collapse")).length ) {
