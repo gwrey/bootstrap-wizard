@@ -4,22 +4,6 @@
   display: block;
   padding: 0;
 }
-.wizard:before,
-.wizard:after {
-  content: " ";
-  display: table;
-}
-.wizard:after {
-  clear: both;
-}
-.wizard:before,
-.wizard:after {
-  content: " ";
-  display: table;
-}
-.wizard:after {
-  clear: both;
-}
 .wizard nav {
   position: relative;
   width: 100%;
@@ -35,22 +19,6 @@
 .wizard nav .wizard-nav-header {
   color: #ffffff;
   background-color: #2383c4;
-}
-.wizard nav .wizard-nav-header:before,
-.wizard nav .wizard-nav-header:after {
-  content: " ";
-  display: table;
-}
-.wizard nav .wizard-nav-header:after {
-  clear: both;
-}
-.wizard nav .wizard-nav-header:before,
-.wizard nav .wizard-nav-header:after {
-  content: " ";
-  display: table;
-}
-.wizard nav .wizard-nav-header:after {
-  clear: both;
 }
 .wizard nav .wizard-nav-header .navbar-toggle {
   width: 32px;

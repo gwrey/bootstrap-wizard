@@ -23,8 +23,14 @@
 
     <div class="container">
 
+        <ul class="nav nav-pills">
+            <li><a href="index.html">Plain</a></li>
+            <li><a href="panel.html">Panel</a></li>
+            <li><a href="modal.html">Modal</a></li>
+        </ul>
+
+        <h3>Plain Wizard</h3>
         <div id="plain" class="example">
-            <h3>Plain Wizard</h3>
             <div class="wizard">
                 <ul class="nav nav-wizard">
                     <li>
@@ -109,202 +115,6 @@
 
             </div> <!-- wizard -->
         </div><!-- example -->
-
-        <!--
-        <div id="panel" class="example">
-            <h3>Plain Wizard in a Panel</h3>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Panel Title
-                    </h3>
-                </div>
-                <div class="panel-body wizard">
-                    <ul class="nav nav-wizard">
-                        <li>
-                            <a href="#step1">Step 1</a>
-                        </li>
-                        <li>
-                            <a href="#step2">Step 2</a>
-                        </li>
-                        <li>
-                            <a href="">Step 3</a>
-                            <ul class="nav nav-wizard">
-                                <li>
-                                    <a href="#step3a">Step 3A</a>
-                                </li>
-                                <li>
-                                    <a href="#step3b">Step 3B</a>
-                                </li>
-                                <li>
-                                    <a href="#step3c">Step 3C</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#step4">Step 4</a>
-                            <ul class="nav nav-wizard">
-                                <li>
-                                    <a href="#step4a">Step 4A</a>
-                                </li>
-                                <li>
-                                    <a href="#step4b">Step 4B</a>
-                                </li>
-                                <li>
-                                    <a href="#step4c">Step 4C</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#step5">Step 5</a>
-                        </li>
-                    </ul>
-
-                    <div class="wizard-pane" id="step1">
-                        <h3>Step 1</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step2">
-                        <h3>Step 2</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step3a">
-                        <h3>Step 3A</h3>
-                        <p>Step 3 href is empty, so the first child is selected</p>
-                    </div>
-
-                    <div class="wizard-pane" id="step3b">
-                        <h3>Step 3B</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step3c">
-                        <h3>Step 3C</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step4">
-                        <h3>Step 4</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step4a">
-                        <h3>Step 4A</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step4b">
-                        <h3>Step 4B</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step4c">
-                        <h3>Step 4C</h3>
-                    </div>
-
-                    <div class="wizard-pane" id="step5">
-                        <h3>Step 5</h3>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        -->
-
-        <!--
-        <div id="modal" class="example">
-            <h3>Plain Wizard in a Modal</h3>
-            <div class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title">
-                                Modal Title
-                            </h3>
-                        </div>
-                        <div class="modal-body wizard">
-                            <ul class="nav nav-wizard">
-                                <li>
-                                    <a href="#step1">Step 1</a>
-                                </li>
-                                <li>
-                                    <a href="#step2">Step 2</a>
-                                </li>
-                                <li>
-                                    <a href="">Step 3</a>
-                                    <ul class="nav nav-wizard">
-                                        <li>
-                                            <a href="#step3a">Step 3A</a>
-                                        </li>
-                                        <li>
-                                            <a href="#step3b">Step 3B</a>
-                                        </li>
-                                        <li>
-                                            <a href="#step3c">Step 3C</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#step4">Step 4</a>
-                                    <ul class="nav nav-wizard">
-                                        <li>
-                                            <a href="#step4a">Step 4A</a>
-                                        </li>
-                                        <li>
-                                            <a href="#step4b">Step 4B</a>
-                                        </li>
-                                        <li>
-                                            <a href="#step4c">Step 4C</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#step5">Step 5</a>
-                                </li>
-                            </ul>
-
-                            <div class="wizard-pane" id="step1">
-                                <h3>Step 1</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step2">
-                                <h3>Step 2</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step3a">
-                                <h3>Step 3A</h3>
-                                <p>Step 3 href is empty, so the first child is selected</p>
-                            </div>
-
-                            <div class="wizard-pane" id="step3b">
-                                <h3>Step 3B</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step3c">
-                                <h3>Step 3C</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step4">
-                                <h3>Step 4</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step4a">
-                                <h3>Step 4A</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step4b">
-                                <h3>Step 4B</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step4c">
-                                <h3>Step 4C</h3>
-                            </div>
-
-                            <div class="wizard-pane" id="step5">
-                                <h3>Step 5</h3>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
 
     </div> <!-- /container -->
 

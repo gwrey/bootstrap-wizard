@@ -1,6 +1,6 @@
 # BootstrapWizard - v0.1
 
-Responsive Bootstrap 3 Wizard
+Responsive Bootstrap 3 Wizard http://www.bootstrapwizard.com
 
 ![Screenshot](screenshots/default.png)
 
