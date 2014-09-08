@@ -2,9 +2,9 @@
 
 Responsive Bootstrap 3 Wizard http://www.bootstrapwizard.com
 
-![Screenshot](screenshots/default.png)
-
 Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.
+
+![Screenshot](screenshots/default.png)
 
 ## Usage
 
