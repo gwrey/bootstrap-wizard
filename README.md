@@ -19,7 +19,9 @@ Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.
             
     <div class="wizard-pane" id="step1">
         <h3>Step 1</h3>
+        <form>
         ...
+        </form>
     </div>
     ...
 </div>
