@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bootstrap Wizard Demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="bootstrap-wizard.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="demo.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <ul class="nav nav-pills">
+            <li><a href="index.html">Plain</a></li>
+            <li><a href="panel.html">Panel</a></li>
+            <li><a href="modal.html">Modal</a></li>
+        </ul>
+
+        <h3>Plain Wizard</h3>
+        <div id="plain" class="example">
+            <div class="wizard">
+                <ul class="nav nav-wizard">
+                    <li>
+                        <a href="#step1">Step 1</a>
+                    </li>
+                    <li>
+                        <a href="#step2">Step 2</a>
+                    </li>
+                    <li>
+                        <a href="">Step 3</a>
+                        <ul class="nav nav-wizard">
+                            <li>
+                                <a href="#step3a">Step 3A</a>
+                            </li>
+                            <li>
+                                <a href="#step3b">Step 3B</a>
+                            </li>
+                            <li>
+                                <a href="#step3c">Step 3C</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#step4">Step 4</a>
+                        <ul class="nav nav-wizard">
+                            <li>
+                                <a href="#step4a">Step 4A</a>
+                            </li>
+                            <li>
+                                <a href="#step4b">Step 4B</a>
+                            </li>
+                            <li>
+                                <a href="#step4c">Step 4C</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#step5">Step 5</a>
+                    </li>
+                </ul>
+
+                <div class="wizard-pane" id="step1">
+                    <h3>Step 1</h3>
+                </div>
+
+                <div class="wizard-pane" id="step2">
+                    <h3>Step 2</h3>
+                </div>
+
+                <div class="wizard-pane" id="step3a">
+                    <h3>Step 3A</h3>
+                    <p>Step 3 href is empty, so the first child is selected</p>
+                </div>
+
+                <div class="wizard-pane" id="step3b">
+                    <h3>Step 3B</h3>
+                </div>
+
+                <div class="wizard-pane" id="step3c">
+                    <h3>Step 3C</h3>
+                </div>
+
+                <div class="wizard-pane" id="step4">
+                    <h3>Step 4</h3>
+                </div>
+
+                <div class="wizard-pane" id="step4a">
+                    <h3>Step 4A</h3>
+                </div>
+
+                <div class="wizard-pane" id="step4b">
+                    <h3>Step 4B</h3>
+                </div>
+
+                <div class="wizard-pane" id="step4c">
+                    <h3>Step 4C</h3>
+                </div>
+
+                <div class="wizard-pane" id="step5">
+                    <h3>Step 5</h3>
+                </div>
+
+            </div> <!-- wizard -->
+        </div><!-- example -->
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="bootstrap-wizard.min.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>

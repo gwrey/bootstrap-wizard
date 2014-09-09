@@ -1,0 +1,24 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+h2 a {
+    padding-top: 70px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    margin-bottom: 20px;
+}
+
+th {
+  font-weight: 500;
+}
+
+td {
+  border: 1px solid #ebebeb;
+  font-weight: 300;
+}

@@ -1,44 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BootstrapWizard, a responsive wizard with expanding sub steps for Bootstrap 3">
+    <meta name="author" content="Greg Wrey">
 
+    <title>BootstrapWizard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <title>Bootstrap-wizard by gwrey</title>
+    <link rel="stylesheet" type="text/css" href="css/pygment_trac.css" media="screen">
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Bootstrap-wizard</h1>
-        <h2>Responsive wizard with expanding sub steps for Bootstrap 3</h2>
-        <a href="https://github.com/gwrey/bootstrap-wizard" class="button"><small>View project on</small>GitHub</a>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="demo/index.html" target="_blank">Demo</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#options">Options</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#events">Events</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </header>
+    </div>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="bootstrapwizard---v01" class="anchor" href="#bootstrapwizard---v01"><span class="octicon octicon-link"></span></a>BootstrapWizard - v0.1</h1>
+    <div class="container">
 
-<p>Responsive Bootstrap 3 Wizard</p>
+        <h1><a name="bootstrapwizard---v01" class="anchor" href="#bootstrapwizard---v01">BootstrapWizard - v0.1</a></h1>
+        <h2>Responsive wizard with expanding sub steps for Bootstrap 3</h2>
+        <p><a href="https://github.com/gwrey/bootstrap-wizard" class="button"><small>View project on</small>GitHub</a></p>
 
-<p>Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.</p>
+<p style="padding-top:20px;">Designed as a clean wizard to be used in a Bootstrap Panel, a Modal, etc.</p>
 
 <p><img src="https://raw.githubusercontent.com/gwrey/bootstrap-wizard/master/screenshots/default.png" alt="Screenshot"></p>
 
-<h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<h2><a name="usage" class="anchor" href="#usage">Usage</a></h2>
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wizard"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-wizard"</span><span class="nt">&gt;</span>
@@ -60,7 +81,7 @@
 </pre></div>
 
 <h2>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+<a name="options" class="anchor" href="#options">Options</a></h2>
 
 <table>
 <tr>
@@ -111,7 +132,7 @@
 <td>text for the buttons</td>
   </tr>
 </table><h2>
-<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h2>
+<a name="methods" class="anchor" href="#methods">Methods</a></h2>
 
 <table>
 <tr>
@@ -127,7 +148,7 @@
 <td>serialize all the form data</td>
     </tr>
 </table><h2>
-<a name="events" class="anchor" href="#events"><span class="octicon octicon-link"></span></a>Events</h2>
+<a name="events" class="anchor" href="#events">Events</a></h2>
 
 <table>
 <tr>
@@ -145,25 +166,16 @@
 </table><p>Inspired by Andrew Moffat's <a href="https://github.com/amoffat/bootstrap-application-wizard">Bootstrap Application Wizard</a></p>
 
 <p>Sub step collapse credit to Osman Nuri Okumuş <a href="https://github.com/onokumus/metisMenu">MetisMenu</a></p>
-        </section>
+</section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/gwrey/bootstrap-wizard/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/gwrey/bootstrap-wizard/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
 
-          <p class="repo-owner"><a href="https://github.com/gwrey/bootstrap-wizard"></a> is maintained by <a href="https://github.com/gwrey">gwrey</a>.</p>
+    </div> <!-- /container -->
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
 
-  
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
