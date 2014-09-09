@@ -1,4 +1,5 @@
-# BootstrapWizard - v0.1 http://www.bootstrapwizard.com
+# BootstrapWizard - v0.1 
+http://www.bootstrapwizard.com
 
 Responsive Bootstrap 3 Wizard
 
